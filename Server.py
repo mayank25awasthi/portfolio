@@ -1,10 +1,7 @@
 from flask import Flask,render_template	,url_for,request,redirect
-from openpyxl import Workbook,load_workbook
+import  csv
 app=Flask(__name__)
 print(__name__)
-Workbook='MY_Worksheet.xlsx'
-book=load_workbook(Workbook)
-sheet=book.active
 
 @app.route('/')
 def hello_world():
@@ -45,10 +42,13 @@ def fn_thank_you():
 	return render_template('thank_you.html')
 
 def fn_write_to_file(data):
-	for i  in list(data.keys()):
-		sheet.append(data[i])
-	book.save(filename=Workbook)
-	
+	with open('database.txt','a') as database:
+		email=data['email']
+		subject=data['subject']
+		message=data['message']
+		file=database.write(f'\n {data}')
+		print(email,subject,message)
+		database.close()
 @app.route('/Submit_Form',methods=['POST','GET'])
 def fn_submit():
 	if request.method=='POST':
