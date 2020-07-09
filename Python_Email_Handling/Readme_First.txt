@@ -1,0 +1,1 @@
+This is Python Project to let you send emails, without loggin into main mail system,like Gmail,Yahoo..

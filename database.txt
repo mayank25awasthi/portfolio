@@ -1,2 +1,0 @@
-
- {'email': 'mayank25awasthi@gmail.com', 'subject': 'Mayank', 'message': 'asdaaaaaaaaaaaaaa'}
