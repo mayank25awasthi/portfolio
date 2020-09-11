@@ -10,6 +10,6 @@ email_obj.set_content( '\n Hi No matter how hard it is , Yor have to learn Pytho
 with smtplib.SMTP(host='smtp.gmail.com',port=587) as smtp:
 	smtp.ehlo()
 	smtp.starttls()
-	smtp.login('mayank25awasthi@gmail.com','9559767113a@M')
+	smtp.login('mayank25awasthi@gmail.com','123@M')
 	smtp.send_message(email_obj)
 	print('Done')
