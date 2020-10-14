@@ -5,8 +5,8 @@ res=requests.get('https://news.ycombinator.com/')
 soup=BeautifulSoup(res.text,'html.parser')
 links=soup.select('.storylink')
 score=soup.select('.subtext')
-print(links[0]['href'])
-title=[]
+print(links[0])
+'''title=[]
 def fn_get_links_n_score(links,score):
 	for idx,item in enumerate(links):
 		v_score=score[idx].select('.score')
@@ -20,3 +20,4 @@ def fn_get_links_n_score(links,score):
 
 pprint(fn_get_links_n_score(links,score))
 
+'''
