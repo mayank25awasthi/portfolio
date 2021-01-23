@@ -1,0 +1,22 @@
+import numpy as np 
+a=np.arange(6).reshape(2,3)
+b=np.array([5,5,5])
+print(a)
+print('\n')
+print(a+b)
+print('\n')
+print(np.mod(a,b))
+print('\n')
+p=np.array([[1,4,7],[9,11,0]])
+print(np.amin(p,1))
+print(np.amin(p,0))
+print('\n')
+print(np.amax(p,0))
+print('\n')
+print(np.ptp(p,0))
+
+print('\n')
+a=np.ones((2,3))
+print(10*a)
+
+print(np.eye(3,3))

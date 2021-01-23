@@ -1,14 +1,13 @@
 import math 
 class BucketSort:
 	def __init__(self):
-		self.bkt_list=[]
-		
+		self.bkt_list=[]		
 
 	def add_element(self,value):
 		self.bkt_list.append(value)
 
 	def find_max_value(self):
-		no_of_bkt=math.ceil(math.sqrt(len(self.bkt_list)))
+		no_of_bkt=math.ceil(math.sqrt(len(self.bkt_list)))# on then basis of this number, number of list has to be created as doing in line 34,35,36 manually
 		for _ in range(len(self.bkt_list)):
 			for i in range(len(self.bkt_list)-1):
 				a=self.bkt_list[i]
@@ -46,8 +45,7 @@ class BucketSort:
 		c=self.list_bbl_srt(c)
 		final_list=a+b+c
 		print(final_list)
-
-
+		
 bkt_obj=BucketSort()
 bkt_obj.add_element(70)
 bkt_obj.add_element(50)
